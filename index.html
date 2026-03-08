@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hành Trình 1 Năm Yêu ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <div id="overlay">
+        <div class="overlay-content">
+            <div class="heart-btn" onclick="startJourney()">❤️</div>
+            <h2>Chạm vào trái tim để bắt đầu hành trình nhé!</h2>
+            <p>(Nhạc sẽ phát ngay khi em nhấn vào đó)</p>
+        </div>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="nhac-sinh-nhat.mp3" type="audio/mpeg">
+    </audio>
+
+    <section id="moc1" class="step">
+        <div class="content">
+            <span class="date">Tháng 03/2025</span>
+            <img src="anh1.jpg">
+            <h3>Lần đầu ta gặp nhau</h3>
+            <p>Ngày đầu tiên ở giảng đường QNU, anh đã lén nhìn em...</p>
+            <button class="next-btn" onclick="scrollToSection('moc2')">Tiếp tục hành trình ↓</button>
+        </div>
+    </section>
+
+    <section id="moc2" class="step">
+        <div class="content">
+            <span class="date">Tháng 06/2025</span>
+            <img src="anh2.jpg">
+            <h3>Buổi hẹn hò đầu tiên</h3>
+            <p>Gió biển Quy Nhơn hôm đó thật đẹp, nhưng em còn đẹp hơn.</p>
+            <button class="next-btn" onclick="scrollToSection('moc3')">Đi tiếp nào ↓</button>
+        </div>
+    </section>
+
+    <section id="moc3" class="step">
+        <div class="content">
+            <span class="date">Tháng 09/2025</span>
+            <div class="video-container">
+                <video id="myVideo" loop muted playsinline>
+                    <source src="video-ky-niem.mp4" type="video/mp4">
+                </video>
+            </div>
+            <h3>Khoảnh khắc vô giá</h3>
+            <p>Đoạn video này anh quay lén lúc em đang cười đấy!</p>
+            <button class="next-btn" onclick="scrollToSection('moc4')">Tiếp tục ↓</button>
+        </div>
+    </section>
+
+    <section id="moc4" class="step">
+        <div class="content">
+            <span class="date">Tháng 12/2025</span>
+            <img src="anh4.jpg">
+            <h3>Mùa đông ấm áp</h3>
+            <p>Cảm ơn em đã sưởi ấm trái tim anh suốt mùa đông qua.</p>
+            <button class="next-btn" onclick="scrollToSection('moc5')">Món quà cuối cùng ↓</button>
+        </div>
+    </section>
+
+    <section id="moc5" class="step">
+        <div class="content birthday-special">
+            <span class="date">Hôm nay - 09/03/2026</span>
+            <img src="anh5.jpg">
+            <h3>Chúc Mừng Sinh Nhật Em! 🎂</h3>
+            <button class="btn-letter" onclick="openLetter()">Mở bức thư của anh ✉️</button>
+        </div>
+    </section>
+
+    <div id="letter-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLetter()">&times;</span>
+            <h2>Gửi công chúa của anh! ❤️</h2>
+            <div id="typing-text"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
